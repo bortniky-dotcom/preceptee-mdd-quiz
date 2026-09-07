@@ -1,2 +1,2 @@
-# preceptee-mdd-quiz
-PMHNP preceptorship MDD exam. Host mddquiz.yuriybortnik.com
+Student MDD preceptorship exam.
+Live host mddquiz.yuriybortnik.com
