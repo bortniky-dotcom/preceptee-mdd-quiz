@@ -4,82 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MDD preceptorship exam</title>
-<style>
-:root {
-  --navy: #0b1c2c;
-  --navy-2: #12263a;
-  --ink: #0a0a0a;
-  --paper: #f4f1ea;
-  --paper-2: #e8e2d6;
-  --line: #c9c1b2;
-  --ok: #1f4d3a;
-  --bad: #6b2a2a;
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: Georgia, "Times New Roman", serif; }
-body { min-height: 100vh; }
-header {
-  background: var(--navy);
-  color: var(--paper);
-  padding: 1rem 1.2rem 1.05rem;
-}
-header .brand { display: flex; align-items: center; gap: .75rem; }
-header img { width: 44px; height: 50px; object-fit: contain; }
-header p { margin: 0; font-size: .88rem; opacity: .85; font-family: system-ui, sans-serif; }
-main { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
-.card { background: #fff; border: 1px solid var(--line); padding: 1.15rem 1.1rem 1.25rem; }
-.kicker { font-family: system-ui, sans-serif; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: #5b5348; margin: 0 0 .55rem; }
-h2 { margin: 0 0 .75rem; font-size: 1.2rem; }
-p, li { line-height: 1.45; }
-.stem { font-size: 1.05rem; margin: 0 0 1rem; }
-label.choice {
-  display: block;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: .7rem .8rem;
-  margin: 0 0 .45rem;
-  cursor: pointer;
-  font-family: system-ui, sans-serif;
-  font-size: .95rem;
-}
-label.choice:has(input:checked) { outline: 2px solid var(--navy); background: #fff; }
-label.choice input { margin-right: .5rem; }
-.row { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1rem; }
-button, .btn {
-  appearance: none;
-  border: 0;
-  background: var(--navy);
-  color: var(--paper);
-  font-family: system-ui, sans-serif;
-  font-size: .95rem;
-  padding: .7rem 1rem;
-  cursor: pointer;
-}
-button.ghost { background: transparent; color: var(--navy); border: 1px solid var(--navy); }
-button:disabled { opacity: .45; cursor: not-allowed; }
-.progress { font-family: system-ui, sans-serif; font-size: .82rem; color: #5b5348; margin: 0 0 .8rem; }
-input[type=text] {
-  width: 100%;
-  font-size: 1rem;
-  padding: .6rem .65rem;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  font-family: system-ui, sans-serif;
-}
-.score { font-size: 1.6rem; margin: .2rem 0 .8rem; }
-.item { border-top: 1px solid var(--line); padding: 1rem 0; }
-.item .verdict { font-family: system-ui, sans-serif; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 .35rem; }
-.ok { color: var(--ok); }
-.bad { color: var(--bad); }
-.note { font-family: system-ui, sans-serif; font-size: .86rem; color: #4a433a; }
-.hidden { display: none; }
-footer { max-width: 42rem; margin: 0 auto; padding: 0 1rem 2rem; font-family: system-ui, sans-serif; font-size: .78rem; color: #6a6258; }
-</style>
+<link rel="stylesheet" href="quiz.css">
 </head>
 <body>
 <header>
   <div class="brand">
-    <img src="" width="44" height="50" alt="YB crest">
+    <img src="" width="50" height="56" alt="YB crest">
     <p>Preceptorship exam. 25 items. Answers after you submit.</p>
   </div>
 </header>
@@ -127,7 +57,7 @@ footer { max-width: 42rem; margin: 0 auto; padding: 0 1rem 2rem; font-family: sy
 <footer>For Abigail and Polina only. Answer key available after.</footer>
 <script src="items.js"></script>
 <script>
-const EMAIL_HOST = "34b34f60add869712c6d807ed3b4286e"; // FormSubmit endpoint token (activated 2026-09-27)
+const EMAIL_HOST = "34b34f60add869712c6d807ed3b4286e";
 let idx = 0;
 const picks = Array(ITEMS.length).fill(null);
 const $ = (id) => document.getElementById(id);
